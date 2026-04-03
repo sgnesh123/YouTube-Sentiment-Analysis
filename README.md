@@ -2,7 +2,7 @@
 
 An interactive web application that examines **sentiment trends** in YouTube comments using "natural language processing" (NLP).
 
-Users can paste a YouTube video URL (or ID), fetch comments via the YouTube Data API, and visualize sentiment distribution and keywords in real time.
+Users can paste a YouTube video URL (or ID), fetch comments via the YouTube Data API, and visualize sentiment distribution and keywords.
 
 Live App Demo: https://youtube-sentiment-analysis-92ve9tquli8hnjougnwq3f.streamlit.app/
 
@@ -15,6 +15,39 @@ Live App Demo: https://youtube-sentiment-analysis-92ve9tquli8hnjougnwq3f.streaml
 - ☁️ Generates a **word cloud** from comment text
 - 🖥️ Interactive **Streamlit** web interface
 - 🔐 Secure API key handling using **environment variables**
+
+
+## 📊 Dataset Analytics Dashboard
+
+- Summary Metrics:
+    - Total Comments
+    - % Positive / Neutral / Negative
+- Sentiment distribution bar chart
+- Sentiment breakdown pie chart
+- Word cloud visualization of all comments
+
+
+## 💬 Fetch YouTube Comments
+
+- Input a **YouTube video URL or ID**
+- Fetch up to **1,000 public comments**
+- Analyze sentiment automatically
+- Preview and download processed dataset as CSV
+
+
+## 🧠 Sentiment Analysis Method
+
+This project uses VADER (**V**alence **A**ware **D**ictionary and s**E**ntiment **R**easoner) because:
+
+- It performs well on short, informal social media text
+- It requires no model training
+- It is computationally lightweight and fast
+
+### Classification Rules:
+
+- A compound score that is greater than 0.05 is labeled 'Positive'
+- A compound score between -0.05 and 0.05 is labeled 'Neutral'
+- A compound score that is less than -0.05 is labeled 'Negative'
 
 
 ## 🛠️ Tech Stack
@@ -40,7 +73,7 @@ youtube-sentiment/
 ```
 
 
-## ⚙️ Installation & Steup
+## ⚙️ Installation & Setup
 
 #### 1️⃣ Clone the repository
 ```
@@ -81,14 +114,6 @@ Then open your browser at:
 ```
 http://localhost:8501
 ```
-
-
-## 📊 Example Outputs
-
-- Sentiment classification (Positive / Neutral / Negative)
-- Sentiment distribution bar charts
-- Word cloud generated from YouTube comments
-- Downloadable CSV of analyzed comments
 
 
 ## 🔒 API Usage Notes
